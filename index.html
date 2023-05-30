@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="assets/images/angel.svg" type="image/x-icon">
+
+  <link rel="stylesheet" href="assets/css/splide.min.css">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/color.css">
+  <link rel="stylesheet" href="assets/css/utilities.css">
+  <link rel="stylesheet" href="assets/css/theme-splide.css">
+
+  <script defer src="assets/js/alpine.min.js"></script>
+  <title>Nircahya</title>
+</head>
+<body class="overflow-hidden">
+  <div class="w-full h-full" x-data="alpine_wrapper()">
+    <div id="intro-pane" x-on:mousedown="doCloseIntroPane()" x-cloak>
+      <div class="d-flex flex-col justify-content-center align-items-center w-full h-full">
+        <div class="angel" x-html="svg.angel"></div>
+        <div class="d-flex align-items-center mt-1">
+          <div class="intro-icon">
+            <span class="icon-1" x-html="svg.connection"></span>
+            <span class="icon-2" x-html="svg.security"></span>
+          </div>
+          <div class="animated-intro d-flex flex-col justify-content-end">
+            <h3 id="intro-alert" x-text="intro.alert"></h3>
+            <div class="intro-bar">
+              <div class="bar-1 bg-ivory"></div>
+              <div class="bar-2 bg-violet"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <main class="container d-flex flex-col h-full mb-4" x-cloak>
+      <button type="button" class="to-top-btn pulse" x-on:click="scrollTop()">
+        <span x-html="svg.caretUp"></span>
+      </button>
+      <div class="to-top-bottom" id="to-top-stripe"></div>
+
+
+      <div class="d-flex mb-6">
+        <div class="angel" x-html="svg.angel"></div>
+        <div class="w-full ml-1 md:ml-2">
+          <div class="header-top-text text-gold">about.me</div>
+          <h1 class="header-title">Nir<span class="text-gold">c</span>ahya</h1>
+          <div class="header-bottom-text">Programmer | Scripter</div>
+        </div>
+      </div>
+
+      <div class="card d-flex justify-content-center gap-2 py-1.5">
+        <template x-for="(item, index) in navigations">
+          <div class="d-flex separator">
+            <button type="button"
+              x-on:click="activeTab = item.href"
+              x-bind:class="{ active: activeTab == item.href }"
+              class="d-block link-item"
+              x-text="item.title"
+            ></button>
+          </div>
+        </template>
+      </div>
+
+      <div x-show="activeTab == 'about'">
+        <div class="super-card">
+          <div class="header">
+            <div class="profile-picture">
+              <img src="https://github.com/vandemonica.png" class="w-16 h-16 rounded-full" alt="Profile Picture">
+            </div>
+          </div>
+
+          <div class="body">
+            <h5>About.me</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Praesentium eos facilis aperiam maxime! Fugiat nihil atque aliquam fuga laborum iure unde autem dolores,
+              accusantium pariatur. Minus temporibus officia explicabo est?
+            </p>
+
+            <h5>Known Tech</h5>
+            <div class="d-flex flex-wrap gap-1">
+              <template x-for="item in profile.skills">
+                <div class="badge">
+                  <span class="badge-color" x-bind:style="{ 'background-color': item.color }"></span>
+                  <span x-text="item.title"></span>
+                </div>
+              </template>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div x-show="activeTab == 'education'">
+        <div class="card py-20 text-center">
+          [ Section is still under development ]
+        </div>
+      </div>
+
+      <div x-show="activeTab == 'portfolio'">
+        <div class="card py-20 text-center">
+          [ Section is still under development ]
+        </div>
+      </div>
+
+      <div class="card py-1.5">
+        <div class="text-center">--- Social Links ---</div>
+        <div class="d-flex justify-content-center mt-1 gap-2">
+          <button class="d-block w-2 h-2 link-item"
+            x-on:click="alert(profile.discord)"
+            x-html="svg.discord"
+          ></button>
+
+          <template x-for="item in profile.socials">
+            <a class="d-block w-2 h-2 link-item"
+              x-bind:href="item.href"
+              x-html="item.icon"
+              target="_blank"
+            ></a>
+          </template>
+        </div>
+      </div>
+    </main>
+  </div>
+
+
+  <script src="assets/js/splide.min.js"></script>
+
+  <script src="assets/js/loader.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

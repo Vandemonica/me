@@ -1,0 +1,39 @@
+/*
+  // -----------------------------------------------------------
+  // -------------------------- Color --------------------------
+  // -----------------------------------------------------------
+
+  black: #000000
+  jetblack: #222222
+  green: #008000
+
+  ivory
+    -#FFFFF0
+    -#C8C8C8
+
+  violet
+    -#5a1db0
+    -#946dca
+*/
+
+.text-ivory {
+  color: #FFFFF0;
+  text-shadow: 0 0 5px #C8C8C8;
+}
+.text-gold {
+  color: #fced12;
+  text-shadow: 0 0 5px #d2e069;
+}
+
+.bg-jetblack {
+  background-color: #222222;
+}
+.bg-ivory {
+  background-color: #FFFFF0;
+}
+.bg-green {
+  background-color: #008000;
+}
+.bg-violet {
+  background-color: #6d43a9;
+}

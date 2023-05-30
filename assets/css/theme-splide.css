@@ -1,0 +1,37 @@
+/*
+  // -----------------------------------------------------------
+  // -------------------- Splide Customize ---------------------
+  // -----------------------------------------------------------
+*/
+
+
+.splide__slide {
+  padding: 24px 48px;
+  border: 1px dashed #FFFFF0;
+  height: 400px;
+}
+.splide__slide::before {
+  content: '';
+  margin-right: 0;
+}
+
+.splide__arrow {
+  background: none;
+  opacity: 1;
+  width: 40px;
+  height: 40px;
+}
+
+.splide__arrow svg {
+  color: #FFFFF0;
+  fill: #FFFFF0;
+  width: 40px;
+  height: 40px;
+}
+
+.splide__arrow--prev {
+  left: 0;
+}
+.splide__arrow--next {
+  right: 0;
+}

@@ -1,0 +1,126 @@
+/*
+  // -----------------------------------------------------------
+  // ------------------------ Utilities ------------------------
+  // -----------------------------------------------------------
+
+  general rule:
+  -padding and margin are 6px per point
+  -width and height are 10px per point
+*/
+
+
+.w-full {
+  width: 100%;
+}
+.w-2 {
+  width: 20px;
+}
+.w-16 {
+  width: 160px;
+}
+.h-full {
+  height: 100%;
+}
+.h-2 {
+  height: 20px;
+}
+.h-16 {
+  height: 160px;
+}
+
+.d-none {
+  display: none;
+}
+.d-block {
+  display: block;
+}
+.d-flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-end {
+  justify-content: end;
+}
+.align-items-center {
+  align-items: center;
+}
+
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.rounded-full {
+  border-radius: 50%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+.mt-1 {
+  margin-top: 6px;
+}
+
+.mb-4 {
+  margin-bottom: 24px;
+}
+.mb-6 {
+  margin-bottom: 36px;
+}
+
+.ml-1 {
+  margin-left: 6px;
+}
+
+.py-1\.5 {
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+.py-20 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.gap-1 {
+  gap: 6px;
+}
+.gap-2 {
+  gap: 12px;
+}
+
+
+@media (min-width: 768px) {
+  .md\:d-none {
+    display: none;
+  }
+  .md\:d-block {
+    display: block;
+  }
+
+  .md\:ml-2 {
+    margin-left: 12px;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .lg\:w-auto {
+    width: auto;
+  }
+  .lg\:h-full {
+    height: 100%;
+  }
+}
