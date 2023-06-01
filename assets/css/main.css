@@ -32,7 +32,6 @@ body {
   margin: 0;
   font-size: 16px;
   height: 140vh;
-  padding-top: 40px;
   position: relative;
   color: #FFFFF0;
   background-color: #000000;
@@ -65,7 +64,7 @@ body::selection {
 }
 
 .container {
-  padding: 0 18px;
+  padding: 40px 18px 0;
   margin: 0 auto;
   max-width: 800px;
 }
@@ -394,12 +393,8 @@ body::selection {
 
 
 @media (min-width: 768px) {
-  body {
-    padding-top: 180px;
-  }
-
   .container {
-    padding: 0 32px;
+    padding: 180px 32px 0;
   }
 
   .angel {
@@ -448,7 +443,7 @@ body::selection {
 }
 
 @media (min-width: 1024px) {
-  body {
+  .container {
     padding-top: 24px;
   }
 
