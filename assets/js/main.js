@@ -108,12 +108,15 @@ function alpine_wrapper() {
       this.alertModal(alert);
     },
     alertModal(text) {
+      const bodyElem = document.querySelector('body');
       const elem = document.getElementById('modal-pane');
 
       if (text != '') {
+        bodyElem.classList.add('overflow-hidden');
         elem.classList.add('active');
         this.modal.text = text;
       } else {
+        bodyElem.classList.remove('overflow-hidden');
         elem.classList.remove('active');
         this.modal.text = '';
       }
