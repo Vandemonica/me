@@ -6,6 +6,9 @@ function alpine_wrapper() {
     placeholder: 'Section currently under construction',
     title: title,
     activeTab: 'about',
+    modal: {
+      text: ''
+    },
     intro: {
       session: localStorage.getItem('visited'),
       elem: document.getElementById('intro-pane'),
@@ -17,6 +20,10 @@ function alpine_wrapper() {
       { title: 'Portfolio', href: 'portfolio' }
     ],
     profile: {
+      about: `
+        Ello there Anon! I'm Nircahya, though I also goes by other internet nicknames.
+        I'm a simple web programmer who waltz a lot around the internet..
+      `,
       discord: 'Mepha#3262',
       skills: [
         {
@@ -95,6 +102,21 @@ function alpine_wrapper() {
         left: 0,
         behavior: 'smooth'
       });
+    },
+    copyText(value, alert) {
+      navigator.clipboard.writeText(value);
+      this.alertModal(alert);
+    },
+    alertModal(text) {
+      const elem = document.getElementById('modal-pane');
+
+      if (text != '') {
+        elem.classList.add('active');
+        this.modal.text = text;
+      } else {
+        elem.classList.remove('active');
+        this.modal.text = '';
+      }
     },
     closeIntroPane() {
       // hard remove the intro-pane

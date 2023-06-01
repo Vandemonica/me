@@ -9,6 +9,10 @@
 */
 
 
+.font-orbitron {
+  font-family: 'Orbitron', monospace;
+}
+
 .w-full {
   width: 100%;
 }
